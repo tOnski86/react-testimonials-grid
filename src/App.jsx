@@ -2,7 +2,7 @@ import Card from './Components/Card';
 
 function App() {
   return (
-    <div className='my-20 lg:my-28 mx-6 grid lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:max-w-7xl'>
+    <div className='my-20 lg:my-28 mx-6 grid lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:max-w-7xl sm:max-w-xl'>
       <Card
         size='wide'
         gridPosition='lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-3'
