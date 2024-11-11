@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 function Card({
+  size,
+  gridPosition,
   authorImage,
   authorName,
   authorTitle,
@@ -13,14 +15,15 @@ function Card({
   reviewTitleStyle,
   reviewDescriptionStyle,
 }) {
-  const { card, quote, image, name, job, title, description } = customTheme;
+  const { grid, card, quote, image, name, job, title, description } =
+    customTheme;
 
   return (
     <div
       className={
         cardBackgroundStyle
-          ? `${card[cardStyle]} relative`
-          : `${card[cardStyle]}`
+          ? `${card[cardStyle]} ${grid[size]} ${gridPosition} relative`
+          : `${card[cardStyle]} ${grid[size]} ${gridPosition}`
       }
     >
       {cardBackgroundStyle && (
@@ -45,13 +48,18 @@ function Card({
 }
 
 const customTheme = {
+  grid: {
+    base: 'lg:row-span-1 lg:col-span-1',
+    wide: 'lg:row-span-1 lg:col-span-2',
+    tall: 'lg:row-span-2 lg:col-span-1',
+  },
   card: {
     violet: 'bg-violet py-6 px-8 rounded-md z-10',
     gray: 'bg-grayBlue py-6 px-8 rounded-md z-10',
     blue: 'bg-blackBlue py-6 px-8 rounded-md z-10',
     white: 'bg-white-100 py-6 px-8 rounded-md z-10',
   },
-  quote: 'absolute top-0 right-5 -z-10',
+  quote: 'absolute top-0 lg:right-24 right-7 -z-10',
   image: {
     violet: 'outline-2 outline outline-[#A775F1] rounded-full w-8',
     white: 'outline-2 outline outline-white-100 rounded-full w-8',
@@ -71,11 +79,6 @@ const customTheme = {
   description: {
     light: 'text-white-100 opacity-70',
     dark: 'text-grayBlue opacity-70',
-  },
-  grid: {
-    base: '',
-    wide: '',
-    tall: '',
   },
 };
 

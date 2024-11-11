@@ -2,8 +2,10 @@ import Card from './Components/Card';
 
 function App() {
   return (
-    <div className='my-20 mx-6 [&>:not(:last-child)]:mb-6'>
+    <div className='my-20 lg:my-28 mx-6 grid lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:max-w-7xl'>
       <Card
+        size='wide'
+        gridPosition='lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-3'
         cardBackgroundStyle='/bg-pattern-quotation.svg'
         cardStyle='violet'
         authorNameStyle='light'
@@ -18,6 +20,8 @@ function App() {
         reviewDescription='“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”'
       />
       <Card
+        size='base'
+        gridPosition='lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-4'
         cardStyle='gray'
         authorNameStyle='light'
         authorTitleStyle='light'
@@ -31,6 +35,8 @@ function App() {
         reviewDescription='“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ”'
       />
       <Card
+        size='base'
+        gridPosition='lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-2'
         cardStyle='white'
         authorNameStyle='dark'
         authorTitleStyle='dark'
@@ -44,6 +50,8 @@ function App() {
         reviewDescription='“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”'
       />
       <Card
+        size='wide'
+        gridPosition='lg:row-start-2 lg:row-end-3 lg:col-start-2 lg:col-end-4'
         cardStyle='blue'
         authorNameStyle='light'
         authorTitleStyle='light'
@@ -57,6 +65,9 @@ function App() {
         reviewDescription='“ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”'
       />
       <Card
+        size='tall'
+        gridPosition='lg:row-start-1 lg:row-end-3 lg:col-start-4 lg:col-end-5'
+        order='3'
         cardStyle='white'
         authorNameStyle='dark'
         authorTitleStyle='dark'
