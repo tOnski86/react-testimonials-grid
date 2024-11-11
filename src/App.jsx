@@ -67,7 +67,6 @@ function App() {
       <Card
         size='tall'
         gridPosition='lg:row-start-1 lg:row-end-3 lg:col-start-4 lg:col-end-5'
-        order='3'
         cardStyle='white'
         authorNameStyle='dark'
         authorTitleStyle='dark'
